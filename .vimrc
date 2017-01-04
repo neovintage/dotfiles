@@ -1,9 +1,10 @@
 execute pathogen#infect()
 syntax enable
-filetype plugin on
+filetype plugin indent on
 set ttimeoutlen=0
 set clipboard=unnamed
 set noswapfile
+set autoindent
 
 
 ""
@@ -31,7 +32,11 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
+" Remap indentation
+vmap <leader>] >gv
+nmap <leader>] >gv
+vmap <leader>[ <gv
+nmap <leader>[ <gv
 
 ""
 "" Status Line

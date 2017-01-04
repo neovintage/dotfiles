@@ -13,7 +13,6 @@ export WORKON_HOME="$HOME/.virtualenvs"
 export ARCHFLAGS="-arch x86_64"
 export EDITOR='vim'
 export CLICOLOR=1
-export PG_CONFIG=/Applications/Postgres93.app/Contents/MacOS/bin
 
 ## My commands
 ##
@@ -23,7 +22,7 @@ alias gs='git status -sb'
 alias gc='git commit'
 alias gd='git diff'
 alias ga='git add'
-alias pg_start='pg_ctl -D /usr/local/var/postgres start'
+alias pg_start='postgres -D /usr/local/var/postgres'
 
 ## Run Anyenv
 ##
