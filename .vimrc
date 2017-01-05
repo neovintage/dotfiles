@@ -38,6 +38,7 @@ nmap <leader>] >gv
 vmap <leader>[ <gv
 nmap <leader>[ <gv
 
+
 ""
 "" Status Line
 ""
@@ -84,3 +85,21 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|elm\-stuff|hg|sass\-cache)$',
   \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
   \ }
+
+
+""
+"" Searching - the_silver_searcher (ag)
+"" use :Ag to search
+""
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+
+  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+endif
