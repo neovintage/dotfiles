@@ -15,7 +15,7 @@ set nowrap
 set tabstop=2
 set shiftwidth=2
 set expandtab
-autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
+autocmd FileType crystal,ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
 autocmd FileType python set sw=4 sts=4 et
 autocmd FileType go set sw=4 sts=4 ts=4 et
 " Strip trailing whitespace
@@ -57,6 +57,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:elm_syntastic_show_warnings = 0
+let g:elm_setup_keybindings = 0
+let g:loaded_syntastic_crystal_crystal_checker = 0
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {'regex': 'possibly useless use of a variable in void context'}
 
 
 ""
@@ -103,3 +108,16 @@ if executable('ag')
 
   command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 endif
+
+
+""
+"" Nerdcommenter
+""
+map <leader><leader> <plug>NERDCommenterToggle<CR>
+imap <leader><leader> <plug>NERDCommenterToggle<CR>
+vmap <leader>] >gv
+vmap <leader>[ <gv
+nmap <leader>] >>
+nmap <leader>[ <<
+omap <leader>] >>
+omap <leader>[ <<
