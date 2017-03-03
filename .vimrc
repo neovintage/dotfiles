@@ -62,7 +62,9 @@ let g:elm_setup_keybindings = 0
 let g:loaded_syntastic_crystal_crystal_checker = 0
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {'regex': 'possibly useless use of a variable in void context'}
-
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["eruby", "ecr"] }
 
 ""
 "" Mac OS X
@@ -77,13 +79,7 @@ vmap <F2> :w !pbcopy<CR><CR>
 ""
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_max_height = 30
-let g:ctrlp_user_command = {
-    \ 'types': {
-      \ 1: ['.git', 'cd %s && git ls-files . --others --exclude-standard && git ls-files . --cached'],
-      \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-      \ },
-    \ 'fallback': 'find %s -type f'
-    \ }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
@@ -101,7 +97,7 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
