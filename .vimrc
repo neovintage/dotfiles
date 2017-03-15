@@ -1,6 +1,8 @@
 execute pathogen#infect()
 syntax enable
-filetype plugin indent on
+filetype on
+filetype plugin on
+filetype indent on
 set ttimeoutlen=0
 set clipboard=unnamed
 set noswapfile
