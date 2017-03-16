@@ -1,13 +1,11 @@
 execute pathogen#infect()
 syntax enable
-filetype on
-filetype plugin on
-filetype indent on
+"filetype on
+"filetype indent plugin on
 set ttimeoutlen=0
 set clipboard=unnamed
 set noswapfile
 set autoindent
-
 
 ""
 "" Whitespace
@@ -17,7 +15,7 @@ set nowrap
 set tabstop=2
 set shiftwidth=2
 set expandtab
-autocmd FileType crystal,ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
+autocmd FileType crystal,ruby,haml,eruby,yaml,html,javascript,sass,cucumber set sw=2 sts=2 et
 autocmd FileType python set sw=4 sts=4 et
 autocmd FileType go set sw=4 sts=4 ts=4 et
 " Strip trailing whitespace
