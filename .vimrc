@@ -2,6 +2,7 @@ execute pathogen#infect()
 syntax enable
 "filetype on
 "filetype indent plugin on
+filetype plugin on
 set ttimeoutlen=0
 set clipboard=unnamed
 set noswapfile
@@ -117,3 +118,13 @@ nmap <leader>] >>
 nmap <leader>[ <<
 omap <leader>] >>
 omap <leader>[ <<
+
+
+""
+"" Writing section
+""
+let g:pencil#wrapModeDefault = 'soft'
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+augroup END

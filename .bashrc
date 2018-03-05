@@ -1,4 +1,4 @@
-alias cfg='/usr/bin/git --git-dir=/Users/rsilkaitis/.myconfig/ --work-tree=/Users/rsilkaitis'
+alias cfg='/usr/bin/git --git-dir=/Users/neovintage/.myconfig/ --work-tree=/Users/neovintage'
 PS1="\n\[\e[1;31m\]>\[\e[0m\] "
 
 PATH=$HOME/.anyenv/bin:/usr/local/bin:/usr/local/heroku/bin:$PATH

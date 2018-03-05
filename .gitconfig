@@ -1,8 +1,8 @@
 [color]
   ui = true
 [user]
-  name = Rimas Silkaitis
-  email = rimas@heroku.com
+	name = rimas silkaitis
+	email = neovintage@github.com
 [alias]
   # Fancy logging.
   #   h = head
