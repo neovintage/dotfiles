@@ -65,7 +65,7 @@ let g:syntastic_eruby_ruby_quiet_messages =
     \ {'regex': 'possibly useless use of a variable in void context'}
 let g:syntastic_mode_map = {
     \ "mode": "active",
-    \ "passive_filetypes": ["eruby", "ecr"] }
+    \ "passive_filetypes": ["eruby", "ecr", "html"] }
 
 ""
 "" Mac OS X
@@ -84,7 +84,7 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|elm\-stuff|hg|sass\-cache)$',
+  \ 'dir':  '\v[\/]\.(git|elm\-stuff|hg|sass\-cache|node\-modules)$',
   \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
   \ }
 
