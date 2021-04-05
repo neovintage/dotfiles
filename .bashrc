@@ -1,11 +1,17 @@
-alias cfg='/usr/bin/git --git-dir=/Users/neovintage/.cfg/ --work-tree=/Users/neovintage'
+PATH=$HOME:/opt/homebrew/bin:/usr/local/bin:$PATH
+
+## Terminal Prompt duh
+##
 PS1="\n\[\e[1;31m\]>\[\e[0m\] "
+
+## Dotfile tracking
+##
+alias cfg='/usr/bin/git --git-dir=/Users/neovintage/.cfg/ --work-tree=/Users/neovintage'
 
 ## asdf version manager
 ##
 . $HOME/.asdf/asdf.sh
-
-PATH=$HOME:/opt/homebrew/bin:/usr/local/bin:$PATH
+. $HOME/.asdf/completions/asdf.bash
 
 ## General Platform stuff
 ##
