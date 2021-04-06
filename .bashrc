@@ -2,7 +2,7 @@ PATH=$HOME:/opt/homebrew/bin:/usr/local/bin:$PATH
 
 ## Terminal Prompt duh
 ##
-PS1="\n\[\e[1;31m\]>\[\e[0m\] "
+export PS1=$'\n'"%F{white}%*%f %F{red}%B➜%b%f "
 
 ## Dotfile tracking
 ##
@@ -15,6 +15,7 @@ alias cfg='/usr/bin/git --git-dir=/Users/neovintage/.cfg/ --work-tree=/Users/neo
 ## General Platform stuff
 ##
 ## export ARCHFLAGS="-arch x86_64"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export EDITOR='vim'
 export CLICOLOR=1
 

@@ -1,7 +1,7 @@
 "" Note: Need to be using Vim 8 at least. Requires the native package manager
 ""
 
-syntax enable
+syntax on
 "filetype on
 "filetype indent plugin on
 filetype plugin on
@@ -9,6 +9,18 @@ set ttimeoutlen=0
 set clipboard=unnamed
 set noswapfile
 set autoindent
+
+""
+""
+""
+"if exists('+termguicolors')
+  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  "set termguicolors
+"endif
+colorscheme nord
+set termguicolors
+
 
 ""
 "" Whitespace
