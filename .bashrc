@@ -11,7 +11,6 @@ alias cfg='/usr/bin/git --git-dir=/Users/neovintage/.cfg/ --work-tree=/Users/neo
 ## asdf version manager
 ##
 . $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
 
 ## General Platform stuff
 ##

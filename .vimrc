@@ -1,4 +1,6 @@
-execute pathogen#infect()
+"" Note: Need to be using Vim 8 at least. Requires the native package manager
+""
+
 syntax enable
 "filetype on
 "filetype indent plugin on
