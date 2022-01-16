@@ -2,7 +2,7 @@
   ui = true
 [user]
 	name = rimas silkaitis
-	email = neovintage@github.com
+	email = neovintage@gmail.com
 [alias]
   # Fancy logging.
   #   h = head
@@ -20,3 +20,5 @@
   la = !git l --all
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
