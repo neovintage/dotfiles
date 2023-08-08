@@ -1,9 +1,6 @@
 "" Note: Need to be using Vim 8 at least. Requires the native package manager
 ""
 
-syntax on
-"filetype on
-"filetype indent plugin on
 filetype plugin on
 set ttimeoutlen=0
 set clipboard=unnamed
@@ -13,14 +10,8 @@ set autoindent
 ""
 ""
 ""
-"if exists('+termguicolors')
-  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  "set termguicolors
-"endif
+syntax on
 colorscheme nord
-set termguicolors
-
 
 ""
 "" Whitespace
@@ -33,6 +24,7 @@ set expandtab
 autocmd FileType crystal,ruby,haml,eruby,yaml,html,javascript,sass,cucumber set sw=2 sts=2 et
 autocmd FileType python set sw=4 sts=4 et
 autocmd FileType go set sw=4 sts=4 ts=4 et
+
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
@@ -60,26 +52,12 @@ nmap <leader>[ <gv
 set laststatus=2
 set statusline=%F%m%r%h%w
 set statusline+=\ [line:\ %l\/%L]
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
 
 ""
-"" Syntastic
+"" ALE
 ""
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:elm_syntastic_show_warnings = 0
-let g:elm_setup_keybindings = 0
-let g:loaded_syntastic_crystal_crystal_checker = 0
-let g:syntastic_eruby_ruby_quiet_messages =
-    \ {'regex': 'possibly useless use of a variable in void context'}
-let g:syntastic_mode_map = {
-    \ "mode": "active",
-    \ "passive_filetypes": ["eruby", "ecr", "html"] }
+let g:ale_fixers = {'typescript': ['deno']}
+let g:lsp_diagnostics_enabled = 0
 
 ""
 "" Mac OS X

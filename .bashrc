@@ -2,7 +2,7 @@ PATH=$HOME:/opt/homebrew/bin:/usr/local/bin:$PATH
 
 ## Terminal Prompt duh
 ##
-export PS1=$'\n'"%F{white}%*%f %F{red}%B➜%b%f "
+export PS1=$'\n'"%F{red}%B➜%b%f "
 
 ## Dotfile tracking
 ##
