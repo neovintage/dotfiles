@@ -82,20 +82,21 @@ let g:ctrlp_custom_ignore = {
 
 
 ""
-"" Searching - the_silver_searcher (ag)
-"" use :Ag to search
+"" Searching - ripgrep (rg)
+"" use :grep to search
 ""
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+if executable('rg')
+  " Use rg over grep
+  set grepprg=rg\ -H\ --no-heading\ --vimgrep
+  set grepformat=%f:%l:%c:%m
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 
-  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+  command -nargs=+ -complete=file -bar Rg silent! grep! <args>|cwindow|redraw!
 endif
 
 
